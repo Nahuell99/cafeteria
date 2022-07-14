@@ -1,5 +1,52 @@
-<ul class="list-group">
-    <li class="list-group-item">Buscar pais </li>
-    <li class="list-group-item">Por regino</li>
-    <li class="list-group-item">Por capital</li>
-</ul>
+<div class="container">
+    <form #forma="ngForm" (ngSubmit)="submit()">
+
+        <div>
+
+            <!--nombre: string-->
+            <input type="text" #nombre="ngModel" [(ngModel)]="pedido.nombre" placeholder="Pedido" name="nombre"
+                minilength="4" class="from-control" required
+                [ngClass]="{'is-valid': !nombre.invalid, 'is-invalid': nombre.invalid}">
+
+            <!--fecha: Date-->
+            <input type="datetime-local" #nombre="ngModel" [(ngModel)]="pedido.fecha" placeholder="Fecha" name="fecha"
+                class="from-control" required>
+
+            <!--tipo: string-->
+            <input type="text" #nombre="ngModel" [(ngModel)]="pedido.detalle" placeholder="Detalle" name="detalle"
+                class="from-control">
+
+            <!--entrega: string-->
+            <datalist id="formato" #nombre="ngModel" [(ngModel)]="pedido.entrega" name="entrega" class="from-control"
+                required>
+                <option value="Para llevar">Para llevar</option>
+                <option value="Comer en salon">Comer en salon</option>
+            </datalist>
+
+            <!--preico: number-->
+            <input type="number" #nombre="ngModel" [(ngModel)]="pedido.preico" placeholder="Preico"
+                name="preico" min="1" class="from-control" required>
+
+            <!--conExtra: boolean-->
+            <input type="text" #nombre="ngModel" [(ngModel)]="pedido.nombre" placeholder="Introduzca su nombre de pila"
+                name="nombre" minilength="4" class="from-control" required
+                [ngClass]="{'is-valid': !nombre.invalid, 'is-invalid': nombre.invalid}">
+
+            <!--cantidad: number-->
+            <input type="text" #nombre="ngModel" [(ngModel)]="pedido.nombre" placeholder="Introduzca su nombre de pila"
+                name="nombre" minilength="4" class="from-control" required
+                [ngClass]="{'is-valid': !nombre.invalid, 'is-invalid': nombre.invalid}">
+
+        </div>
+
+        <button class="button" type="submit">Purchase</button>
+
+    </form>
+
+
+    <ul class="list-group">
+        <li class="list-group-item">Buscar pais </li>
+        <li class="list-group-item">Por regino</li>
+        <li class="list-group-item">Por capital</li>
+    </ul>
+</div>

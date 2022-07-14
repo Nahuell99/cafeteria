@@ -1,3 +1,11 @@
 .small-flag{
-    width: 40px;
+    width: 70px;
+}
+.flex-container {
+    display: flex;
+    padding-bottom: 25px;
+}
+
+h3{
+    padding-top: 20px;
 }

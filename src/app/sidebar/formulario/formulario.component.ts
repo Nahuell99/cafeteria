@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { pedido } from '../../Interfaces/pedido.interface';
 
 @Component({
   selector: 'app-formulario',
@@ -8,9 +8,24 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  pedido: pedido = {
+    nombre: '',
+    fecha: new Date(),
+    detalle: '',
+    entrega: '',
+    preico: 0,
+    conExtra: false,
+    cantidad: 0
+  }
+
+  constructor(){
+
+  }
 
   ngOnInit(): void {
+  }
+
+  submit() {
   }
 
 }
