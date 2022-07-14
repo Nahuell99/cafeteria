@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { pedido } from '../../Interfaces/pedido.interface';
 
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -12,11 +13,13 @@ export class FormularioComponent implements OnInit {
     nombre: '',
     fecha: new Date(),
     detalle: '',
-    entrega: '',
+    entrega: 'Para llevar',
     preico: 0,
     conExtra: false,
     cantidad: 0
   }
+
+  pedidos: pedido[] = [];
 
   constructor(){
 
@@ -26,6 +29,13 @@ export class FormularioComponent implements OnInit {
   }
 
   submit() {
+    console.log(this.pedido.nombre);
+    console.log(this.pedido.fecha);
+    console.log(this.pedido.detalle);
+    console.log(this.pedido.entrega);
+    console.log(this.pedido.preico);
+    console.log(this.pedido.conExtra);
+    console.log(this.pedido.cantidad);
   }
 
 }
