@@ -10,3 +10,21 @@
 .example-container .mat-form-field+.mat-form-field {
     margin-left: 8px;
 }
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.small-flag{
+    width: 70px;
+}
+.flex-container {
+    display: flex;
+    padding-bottom: 25px;
+}
+
+h3{
+    padding-top: 20px;
+}

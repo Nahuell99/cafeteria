@@ -1,3 +1,12 @@
+<div class="flex-container">
+    <div> <img align="left" src="../../../assets/iconCoffee.png" alt="imagen" class="small-flag"> </div>
+    <div>
+        <h3>Bar Osvaldo</h3>
+    </div>
+
+</div>
+
+
 <div class="flex-direction">
     <form #forma="ngForm" (ngSubmit)="submit()">
         <div>
@@ -7,6 +16,11 @@
                     minilength="4" class="from-control" required
                     [ngClass]="{'is-valid': !nombre.invalid, 'is-invalid': nombre.invalid}">
             </div>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput>
+            </mat-form-field>
 
             <!--fecha: Date-->
             <div>
@@ -37,7 +51,7 @@
 
             <!--preico: number-->
             <div>
-                <input type="number" #nombre="ngModel" [(ngModel)]="pedido.preico" placeholder="Preico" name="preico"
+                <input type="number" #nombre="ngModel" [(ngModel)]="pedido.precio" placeholder="Preico" name="preico"
                     min="1" class="from-control" required>
             </div>
 
@@ -50,7 +64,7 @@
             </div>
 
 
-            <mat-radio-group aria-label="Select an option" >
+            <mat-radio-group aria-label="Select an option">
                 <mat-radio-button value="1">Si</mat-radio-button>
                 <mat-radio-button value="2">Option 2</mat-radio-button>
             </mat-radio-group>
@@ -68,4 +82,7 @@
             <button class="button" type="submit">Enviar</button>
         </div>
     </form>
+
+
+
 </div>
