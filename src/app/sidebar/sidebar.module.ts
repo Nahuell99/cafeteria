@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormularioComponent } from './formulario/formulario.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ComponentsModule } from '../components/components.module';
-
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 
 
 @NgModule({
@@ -15,7 +14,7 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     RouterModule,
     FormsModule,
-    ComponentsModule
+    AngularMaterialModule
   ],
   exports: [
     FormularioComponent

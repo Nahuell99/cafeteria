@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Entrega, pedido } from '../../Interfaces/pedido.interface';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Entrega, Pedido } from '../../../Interfaces/pedido.interface';
 
 
 @Component({
@@ -9,17 +10,19 @@ import { Entrega, pedido } from '../../Interfaces/pedido.interface';
 })
 export class FormularioComponent implements OnInit {
 
-  pedido: pedido = {
+  @ViewChild('miFormulario') miFormulario!: NgForm;
+
+  pedido: Pedido = {
     nombre: '',
     fecha: new Date(),
     detalle: '',
     entrega: Entrega.ParaLlevar,
     precio: 0,
-    conExtra: false,
+    conServilletas: false,
     cantidad: 0
   }
 
-  pedidos: pedido[] = [];
+  pedidos: Pedido[] = [];
 
   constructor(){
 
@@ -34,8 +37,12 @@ export class FormularioComponent implements OnInit {
     console.log(this.pedido.detalle);
     console.log(this.pedido.entrega);
     console.log(this.pedido.precio);
-    console.log(this.pedido.conExtra);
+    console.log(this.pedido.conServilletas);
     console.log(this.pedido.cantidad);
+    console.log(this.miFormulario.control.value);
+    this.miFormulario.resetForm({});
+
+//    this.miFormulario.resetForm({});
   }
 
 }

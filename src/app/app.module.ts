@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { SidebarModule } from './sidebar/sidebar.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ComponentsModule } from './components/components.module';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { PedidosModule } from './pedidos/pedidos.module';
+import { PedidosService } from './pedidos/services/pedidos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,12 +22,15 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     BrowserModule,
     SidebarModule,
-    FormsModule,
+    PedidosModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule,
-    ComponentsModule
+    AngularMaterialModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
+  providers: [PedidosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

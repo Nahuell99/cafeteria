@@ -1,0 +1,41 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "pedido": [
+    {
+      "id": 1,
+      "nombre": "Cafe con leche",
+      "fecha": "25/8/2022",
+      "detalle": "Con edulcorante",
+      "entrega": "Para llevar",
+      "preico": 250,
+      "conExtra": true,
+      "cantidad": 3
+    },
+    {
+      "id": 2,
+      "nombre": "Medialunas",
+      "fecha": "25/8/2022",
+      "detalle": "De graza",
+      "entrega": "Para llevar",
+      "preico": 150,
+      "conExtra": false,
+      "cantidad": 2
+    },
+    {
+      "id": 3,
+      "nombre": "Tostado de jamon y queso",
+      "fecha": "25/8/2022",
+      "detalle": "sin tostar",
+      "entrega": "Comer en salon",
+      "preico": 352,
+      "conExtra": false,
+      "cantidad": 1
+    }
+  ]
+}

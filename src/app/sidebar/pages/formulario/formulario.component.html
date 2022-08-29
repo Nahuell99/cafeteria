@@ -1,0 +1,107 @@
+<div class="flex-container">
+    <div> <img align="left" src="../../../assets/iconCoffee.png" alt="imagen" class="small-flag"> </div>
+    <div>
+        <h3>Bar Osvaldo</h3>
+    </div>
+</div>
+
+
+<div class="flex-direction">
+    <form (ngSubmit)="submit()" #miFormulario="ngForm">
+        <div>
+            <!--nombre: string  -->
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input  matInput 
+                            type="text" 
+                            [(ngModel)]="pedido.nombre" 
+                            name="nombre" 
+                            minilength="4">
+                </mat-form-field>
+            </div>
+
+            <!--fecha: Date-->
+
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha</mat-label>
+                    <input  matInput 
+                            type="datetime-local" 
+                            [(ngModel)]="pedido.fecha" 
+                            name="fecha">
+                </mat-form-field>
+            </div>
+
+            <!--detalle: string-->
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Detalle</mat-label>
+                    <input  matInput 
+                            [(ngModel)]="pedido.detalle" 
+                            type="text"
+                            name="detalle">
+                </mat-form-field>
+            </div>
+
+            <!--entrega: string-->
+            <div>
+                <mat-form-field appearance="fill" name="entrega" class="from-control">
+                    <mat-label>Forma de entrega:</mat-label>
+                    <mat-select [(value)]="pedido.entrega" 
+                                name="entrega">
+                        <mat-option value="Para llevar">Para llevar</mat-option>
+                        <mat-option value="Comer en salon">Comer en salon</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+
+            <!--Precio: number-->
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Precio</mat-label>
+                    <input  matInput 
+                            type="number" 
+                            [(ngModel)]="pedido.precio" 
+                            name="precio" 
+                            min="1">
+                </mat-form-field>
+            </div>
+
+
+            <!--conServilletas: boolean-->
+            <div>
+                <mat-radio-group    aria-label="Select an option" 
+                                    [(ngModel)]="pedido.conServilletas" 
+                                    name="conServilletas">
+                    <mat-radio-button value=true>Si</mat-radio-button>
+                    <mat-radio-button value=false>No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <!--cantidad: number-->
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cantidad</mat-label>
+                    <input  matInput 
+                            type="number" 
+                            [(ngModel)]="pedido.cantidad" 
+                            name="cantidad" 
+                            min="1">
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div>
+            <button mat-raised-button color="primary" type="submit" [disabled]="miFormulario.invalid">
+                <mat-icon>edit</mat-icon>
+                Enviar
+            </button>
+        </div>
+    </form>
+
+
+
+</div>

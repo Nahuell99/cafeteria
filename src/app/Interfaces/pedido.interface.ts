@@ -1,10 +1,11 @@
-export interface pedido {
+export interface Pedido {
+    id?:        string;
     nombre:     string;
     fecha:      Date;
     detalle:    string;
     entrega:    Entrega;
     precio:     number;
-    conExtra:   boolean;
+    conServilletas:   boolean;
     cantidad:   number;
 }
 
