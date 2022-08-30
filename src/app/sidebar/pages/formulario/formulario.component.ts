@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Entrega, Pedido } from '../../../Interfaces/pedido.interface';
+import { PedidosService } from '../../../pedidos/services/pedidos.service';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class FormularioComponent implements OnInit {
 
   pedidos: Pedido[] = [];
 
-  constructor(){
+  constructor(private pedidosService: PedidosService){
 
   }
 
@@ -32,17 +33,14 @@ export class FormularioComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.pedido.nombre);
-    console.log(this.pedido.fecha);
-    console.log(this.pedido.detalle);
-    console.log(this.pedido.entrega);
-    console.log(this.pedido.precio);
-    console.log(this.pedido.conServilletas);
-    console.log(this.pedido.cantidad);
+    
     console.log(this.miFormulario.control.value);
+
+    this.pedidosService.agregarPedido(this.miFormulario.control.value)
+      .subscribe( resp => console.log ("Se agrego pedido"));
+
     this.miFormulario.resetForm({});
 
-//    this.miFormulario.resetForm({});
   }
 
 }

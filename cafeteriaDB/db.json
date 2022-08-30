@@ -36,6 +36,15 @@
       "preico": 352,
       "conExtra": false,
       "cantidad": 1
+    },
+    {
+      "nombre": "asd",
+      "fecha": "2022-08-29T11:19",
+      "detalle": "deta",
+      "precio": 2,
+      "conServilletas": "false",
+      "cantidad": 4,
+      "id": 4
     }
   ]
 }
