@@ -48,10 +48,10 @@
             <div>
                 <mat-form-field appearance="fill" name="entrega" class="from-control">
                     <mat-label>Forma de entrega:</mat-label>
-                    <mat-select [(value)]="pedido.entrega" 
+                    <mat-select [(ngModel)]="pedido.entrega" 
                                 name="entrega">
-                        <mat-option value="Para llevar">Para llevar</mat-option>
-                        <mat-option value="Comer en salon">Comer en salon</mat-option>
+                        <mat-option value='ParaLlevar'>Para llevar</mat-option>
+                        <mat-option value='ComerEnSalon'>Comer en salon</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -72,6 +72,8 @@
 
             <!--conServilletas: boolean-->
             <div>
+                <label>¿Con servilletas?</label>
+                <br>
                 <mat-radio-group    aria-label="Select an option" 
                                     [(ngModel)]="pedido.conServilletas" 
                                     name="conServilletas">

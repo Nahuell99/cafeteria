@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TablaComponent } from './pages/tabla/tabla.component';
 import { PedidosPipe } from './pipes/pedidos.pipe';
+import { MatTableModule } from '@angular/material/table' 
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
+
 
 
 
@@ -14,7 +17,8 @@ import { PedidosPipe } from './pipes/pedidos.pipe';
     TablaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AngularMaterialModule
   ]
 })
 export class PedidosModule { }

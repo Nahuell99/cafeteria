@@ -1,3 +1,51 @@
 <h3> Listado de Pedidos</h3>
 <hr>
+
+<table mat-table [dataSource]="pedidos" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.fecha}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="detalle">
+        <th mat-header-cell *matHeaderCellDef> Detalle </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.detalle}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="entrega">
+        <th mat-header-cell *matHeaderCellDef> Entrega </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.entrega}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef> Precio </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.precio}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="conServilletas">
+        <th mat-header-cell *matHeaderCellDef> Con Servilletas </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.conServilletas}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+        <td mat-cell *matCellDef="let pedidos"> {{pedidos.cantidad}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnasTabla"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnasTabla;" ></tr>
+</table>
+
+
+
 <pre>{{pedidos | json}}</pre>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Pedido } from 'src/app/Interfaces/pedido.interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { Entrega, Pedido } from 'src/app/Interfaces/pedido.interface';
 import { PedidosService } from '../../services/pedidos.service';
 
 @Component({
@@ -10,12 +10,14 @@ import { PedidosService } from '../../services/pedidos.service';
 export class TablaComponent implements OnInit {
 
   pedidos: Pedido[] = [];
+  columnasTabla: string[] = ['id', 'nombre', 'fecha', 'detalle', 'entrega', 'precio', 'conServilletas', 'cantidad'];
 
-  constructor(private pedidosService: PedidosService) {}
+  constructor(private pedidosService: PedidosService) { }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.pedidosService.getPedidos()
       .subscribe(resp => this.pedidos = resp);
   }
+
 
 }

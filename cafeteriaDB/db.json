@@ -13,8 +13,8 @@
       "fecha": "25/8/2022",
       "detalle": "Con edulcorante",
       "entrega": "Para llevar",
-      "preico": 250,
-      "conExtra": true,
+      "precio": 250,
+      "conServilletas": true,
       "cantidad": 3
     },
     {
@@ -23,8 +23,8 @@
       "fecha": "25/8/2022",
       "detalle": "De graza",
       "entrega": "Para llevar",
-      "preico": 150,
-      "conExtra": false,
+      "precio": 150,
+      "conServilletas": false,
       "cantidad": 2
     },
     {
@@ -33,18 +33,38 @@
       "fecha": "25/8/2022",
       "detalle": "sin tostar",
       "entrega": "Comer en salon",
-      "preico": 352,
-      "conExtra": false,
+      "precio": 352,
+      "conServilletas": false,
       "cantidad": 1
     },
     {
       "nombre": "asd",
-      "fecha": "2022-08-29T11:19",
+      "fecha": "2022-08-29",
+      "detalle": "deta",
+      "entrega": "Comer en salon",
+      "precio": 2,
+      "conServilletas": false,
+      "cantidad": 4,
+      "id": 4
+    },
+    {
+      "nombre": "asdad",
+      "fecha": "2022-09-09T11:44",
       "detalle": "deta",
       "precio": 2,
       "conServilletas": "false",
-      "cantidad": 4,
-      "id": 4
+      "cantidad": 2,
+      "id": 5
+    },
+    {
+      "nombre": "asdasd",
+      "fecha": "2022-09-09T11:57",
+      "detalle": "asdasd",
+      "entrega": "ComerEnSalon",
+      "precio": 213,
+      "conServilletas": "true",
+      "cantidad": 1231,
+      "id": 6
     }
   ]
 }

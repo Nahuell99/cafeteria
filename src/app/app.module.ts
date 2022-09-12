@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,7 +11,7 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { PedidosModule } from './pedidos/pedidos.module';
 import { PedidosService } from './pedidos/services/pedidos.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatTableModule } from '@angular/material/table' 
 
 
 
@@ -28,9 +28,14 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     AngularMaterialModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [PedidosService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ]
 })
 export class AppModule { }

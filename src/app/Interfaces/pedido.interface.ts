@@ -1,12 +1,12 @@
 export interface Pedido {
-    id?:        string;
-    nombre:     string;
-    fecha:      Date;
-    detalle:    string;
-    entrega:    Entrega;
-    precio:     number;
-    conServilletas:   boolean;
-    cantidad:   number;
+    id?: number;
+    nombre: string;
+    fecha: Date;
+    detalle: string;
+    entrega: Entrega;
+    precio: number;
+    conServilletas: boolean;
+    cantidad: number;
 }
 
 export enum Entrega {

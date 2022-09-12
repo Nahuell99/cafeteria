@@ -13,6 +13,9 @@ export class FormularioComponent implements OnInit {
 
   @ViewChild('miFormulario') miFormulario!: NgForm;
 
+  tiposEntrega = Entrega;
+  keys:string[];
+
   pedido: Pedido = {
     nombre: '',
     fecha: new Date(),
@@ -25,22 +28,19 @@ export class FormularioComponent implements OnInit {
 
   pedidos: Pedido[] = [];
 
-  constructor(private pedidosService: PedidosService){
-
+  constructor(private pedidosService: PedidosService) {
+    this.keys = Object.keys(this.tiposEntrega);
+    console.log(this.keys);
   }
 
   ngOnInit(): void {
   }
 
   submit() {
-    
     console.log(this.miFormulario.control.value);
-
     this.pedidosService.agregarPedido(this.miFormulario.control.value)
-      .subscribe( resp => console.log ("Se agrego pedido"));
-
+      .subscribe(resp => console.log("Se agrego pedido"));
     this.miFormulario.resetForm({});
-
   }
 
 }

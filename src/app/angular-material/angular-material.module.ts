@@ -12,6 +12,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { CdkTableModule } from '@angular/cdk/table';
+
 
 
 
@@ -31,7 +34,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatCheckboxModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatTableModule,
+    MatIconModule,
+    CdkTableModule
   ],
   imports: [
     CommonModule
