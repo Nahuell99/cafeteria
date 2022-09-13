@@ -8,26 +8,6 @@
   ],
   "pedido": [
     {
-      "id": 1,
-      "nombre": "Cafe con leche",
-      "fecha": "25/8/2022",
-      "detalle": "Con edulcorante",
-      "entrega": "Para llevar",
-      "precio": 250,
-      "conServilletas": true,
-      "cantidad": 3
-    },
-    {
-      "id": 2,
-      "nombre": "Medialunas",
-      "fecha": "25/8/2022",
-      "detalle": "De graza",
-      "entrega": "Para llevar",
-      "precio": 150,
-      "conServilletas": false,
-      "cantidad": 2
-    },
-    {
       "id": 3,
       "nombre": "Tostado de jamon y queso",
       "fecha": "25/8/2022",
@@ -46,15 +26,6 @@
       "conServilletas": false,
       "cantidad": 4,
       "id": 4
-    },
-    {
-      "nombre": "asdad",
-      "fecha": "2022-09-09T11:44",
-      "detalle": "deta",
-      "precio": 2,
-      "conServilletas": "false",
-      "cantidad": 2,
-      "id": 5
     },
     {
       "nombre": "asdasd",

@@ -30,7 +30,6 @@ export class FormularioComponent implements OnInit {
 
   constructor(private pedidosService: PedidosService) {
     this.keys = Object.keys(this.tiposEntrega);
-    console.log(this.keys);
   }
 
   ngOnInit(): void {

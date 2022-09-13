@@ -13,3 +13,8 @@ export enum Entrega {
     ParaLlevar = "Para llevar",
     ComerEnSalon = "Comer en salon"
 }
+
+export interface DataEnviada {
+    id: number;
+    nombre: string;
+}

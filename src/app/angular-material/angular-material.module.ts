@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -27,6 +28,7 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatSelectModule,
     MatRadioModule,
     MatDatepickerModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatSliderModule,
     MatInputModule,

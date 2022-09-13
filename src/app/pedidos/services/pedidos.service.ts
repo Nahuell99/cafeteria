@@ -19,7 +19,7 @@ export class PedidosService {
   }
 
   //GET-ID
-  getPedidoId(id: string): Observable<Pedido> {
+  getPedidoId(id: number): Observable<Pedido> {
     return this.http.get<Pedido>(`${this.baseUrl}/pedido/${id}`);
   }
 
@@ -39,7 +39,7 @@ export class PedidosService {
   }
 
   //DELETE
-  borrarPedido(id: string): Observable<any>{
+  borrarPedido(id: number): Observable<any>{
     return this.http.delete<any>(`${this.baseUrl}/pedido/${id}`);
   }
 
