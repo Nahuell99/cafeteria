@@ -11,8 +11,7 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { PedidosModule } from './pedidos/pedidos.module';
 import { PedidosService } from './pedidos/services/pedidos.service';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table' 
-
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({

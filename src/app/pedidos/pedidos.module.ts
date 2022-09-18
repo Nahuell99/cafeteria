@@ -5,6 +5,7 @@ import { PedidosPipe } from './pipes/pedidos.pipe';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { BorrarPedidoComponent } from './components/borrar-pedido/borrar-pedido.component';
 import { MensajePopUpComponent } from './components/mensaje-pop-up/mensaje-pop-up.component';
+import { EditarPedidoComponent } from './components/editar-pedido/editar-pedido.component';
 
 
 
@@ -14,7 +15,8 @@ import { MensajePopUpComponent } from './components/mensaje-pop-up/mensaje-pop-u
     TablaComponent,
     PedidosPipe,
     BorrarPedidoComponent,
-    MensajePopUpComponent
+    MensajePopUpComponent,
+    EditarPedidoComponent
   ],
   exports: [
     TablaComponent

@@ -8,16 +8,6 @@
   ],
   "pedido": [
     {
-      "id": 3,
-      "nombre": "Tostado de jamon y queso",
-      "fecha": "25/8/2022",
-      "detalle": "sin tostar",
-      "entrega": "Comer en salon",
-      "precio": 352,
-      "conServilletas": false,
-      "cantidad": 1
-    },
-    {
       "nombre": "asd",
       "fecha": "2022-08-29",
       "detalle": "deta",

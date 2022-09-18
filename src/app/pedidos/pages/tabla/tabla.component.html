@@ -46,7 +46,7 @@
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let pedidos">
             <app-borrar-pedido [idPedido]="pedidos.id"></app-borrar-pedido>
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" (click)="editarPedido(pedidos.id)" class="icon">edit</mat-icon>
+            <app-editar-pedido [idPedido]="pedidos.id"></app-editar-pedido>
         </td>
     </ng-container>
 
